@@ -23,7 +23,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # applications
-    "app_lesson_4",
+    "goods",
+    "users",
+    "home"
+
 
     # libraries
 ]
