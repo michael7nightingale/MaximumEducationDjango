@@ -1,0 +1,45 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+{% load static %}
+<link href="{% static 'goods/css/goods.css' %}" rel="stylesheet">
+
+<section class="section-products">
+    <div class="container">
+    <div class="row justify-content-center text-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="header">
+                    <h3>Featured Product</h3>
+                    <h2>Popular Products</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for good in goods %}
+                <div class="col-md-6 col-lg-4 col-xl-3" style="border:1px solid black; padding: 10px">
+                    <div id="product-1" class="single-product">
+                        <div class="part-1">
+                            {% if good.discount %}
+                                <span class="discount">{{ good.discount }}% off</span>
+                            {% endif %}
+                            <a href="{% url 'good-detail' good_slug=good.slug %}">
+                                <img style="width: 100%" src="{{ good.photo.url }}" >
+                            </a>
+                        </div>
+
+                        <div class="part-2">
+                            <h3 class="product-title">{{ good.title }}</h3>
+                            {% if good.discount %}
+                                <h4 class="product-old-price">{{ good.price }}</h4>
+                                <h4 class="product-price">{{ good.total_price }} RUB</h4>
+                            {% else %}
+                                <h4 class="product-price">{{ good.price }} RUB</h4>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+		</div>
+</section>
+{% endblock %}
