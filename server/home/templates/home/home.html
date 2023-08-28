@@ -2,17 +2,17 @@
 
 {% block content %}
 <div class="jumbotron">
-    <h1>Тренировка памяти</h1>
+    <h1>Online shop №1</h1>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Смотреть ленту товаров</h2>
-         <p><a class="btn btn-default" href="{% url 'goods' %}">перейти &raquo;</a></p>
+        <h2>Watch goods</h2>
+         <p><a class="btn btn-primary" href="{% url 'goods-all' %}">go to goods &raquo;</a></p>
     </div>
     <div class="col-md-4">
-          <h2>Смотреть ленту товаров</h2>
-         <p><a class="btn btn-default" href="">перейти &raquo;</a></p>
+        <h2>Publish your own good</h2>
+         <p><a class="btn btn-primary" href="{% url 'good-create' %}">create &raquo;</a></p>
     </div>
 </div>
 {% endblock %}
