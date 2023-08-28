@@ -24,8 +24,8 @@ INSTALLED_APPS = [
 
     # applications
     "goods",
+    "home",
     "users",
-    "home"
 
 
     # libraries
