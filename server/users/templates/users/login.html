@@ -2,7 +2,7 @@
 
 {% block content %}
 {% load static %}
-<form style="max-width: 50%; text-align: center" method="post">
+<form method="post">
 {% csrf_token %}
 {{ form }}
 <button class="btn btn-primary" style="margin: 20px">Login</button>

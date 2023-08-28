@@ -17,7 +17,7 @@ class UserLoginForm(AuthenticationForm):
     )
     password = forms.CharField(
         max_length=100,
-        widget=forms.TextInput(
+        widget=forms.PasswordInput(
             attrs={
                 "class": "form-control"
             }
